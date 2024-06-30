@@ -16,7 +16,7 @@ export default function HomePage() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
       <div className="flex gap-4 p-8">
         {mockData.map((image) => (
-          <div>
+          <div key={image.id} className="">
             <img src={image.url} alt="image" className="w-48" />
           </div>
         ))}
