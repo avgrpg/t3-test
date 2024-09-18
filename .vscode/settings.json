@@ -7,5 +7,6 @@
     "html",
     "typescriptreact"
   ],
-  "indentRainbow.indicatorStyle": "light"
+  "indentRainbow.indicatorStyle": "light",
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
