@@ -10,7 +10,7 @@ const mockData = [
     url: "https://utfs.io/f/e33fedc9-9ba1-410c-b067-45b8231487d3-ed973w.jpg",
   },
 ];
-
+// sth like this
 export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
