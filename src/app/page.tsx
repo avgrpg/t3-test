@@ -15,20 +15,16 @@ const mockData = [
 ];
 // sth like this
 export default async function HomePage() {
-  const data = await db.query.posts.findMany();
-  console.log(data);
+  const data = await db.query.posts.findMany({
+    orderBy: (model, {desc}) => desc(model.createdAt),
+  });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
       <div className="flex gap-4 p-8">
         {data.map((post) => (
-          <div key={post.id} className="">
-            {post.name}
-          </div>
-        ))}
-        {mockData.map((image) => (
-          <div key={image.id} className="">
-            <img src={image.url} alt="image" className="w-48" />
+          <div key={post.id} className="flex flex-col gap-2">
+            <img src={post.url} alt={post.name} />
           </div>
         ))}
       </div>
