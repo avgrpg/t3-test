@@ -13,7 +13,7 @@ const mockData = [
     url: "https://utfs.io/f/e33fedc9-9ba1-410c-b067-45b8231487d3-ed973w.jpg",
   },
 ];
-// sth like this
+
 export default async function HomePage() {
   const data = await db.query.posts.findMany({
     orderBy: (model, {desc}) => desc(model.createdAt),
